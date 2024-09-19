@@ -20,7 +20,7 @@ steps:
 - task: CopyFiles@2
   inputs:
     SourceFolder: 'C:\WebsiteAgent\_work\2\s\dist\'
-    Contents: 'index.htm'
+    Contents: 'index.html'
     TargetFolder: '$(build.artifactstagingdirectory)'
 - task: PublishBuildArtifacts@1
   inputs:
