@@ -11,5 +11,6 @@ pool:
 
 steps:
 - script: 
+    npm install --save-dev webpack-cli
     npm run build
   displayName: 'npm install and build'
