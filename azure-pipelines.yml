@@ -17,3 +17,13 @@ steps:
 - script: 
     npm run build
   displayName: 'Build project with Webpack'
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: 'C:\WebsiteAgent\_work\2\s\dist\'
+    Contents: 'index.htm'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'BuildFile'
+    publishLocation: 'Container'
