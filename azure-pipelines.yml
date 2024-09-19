@@ -11,6 +11,9 @@ pool:
 
 steps:
 - script: 
+    npm install
+  displayName: 'Install npm dependencies'
+
+- script: 
     npm run build
-    npm i webpack
-  displayName: 'npm install and build'
+  displayName: 'Build project with Webpack'
