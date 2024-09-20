@@ -27,10 +27,10 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'Dist'
     publishLocation: 'Container'
-- task: AzureWebApp@1
-  inputs:
-    azureSubscription: 'Pay-As-You-Go (5699603d-c14b-42b1-a393-6e7138a12d93)'
-    appType: 'webApp'
-    appName: 'Simplewebsite'
-    package: '$(Build.ArtifactStagingDirectory)'
-    deploymentMethod: 'auto'
+# - task: AzureWebApp@1
+#   inputs:
+#     azureSubscription: 'Pay-As-You-Go (5699603d-c14b-42b1-a393-6e7138a12d93)'
+#     appType: 'webApp'
+#     appName: 'Simplewebsite'
+#     package: '$(Build.ArtifactStagingDirectory)'
+#     deploymentMethod: 'auto'
