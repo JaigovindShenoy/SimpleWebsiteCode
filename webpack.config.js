@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
-  entry: ['./public/index.html', './src/assets/css/style.css'],
+  entry: ['./public/index.html', './src/style.css'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
