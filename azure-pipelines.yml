@@ -19,7 +19,7 @@ steps:
   displayName: 'Build project with Webpack'
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(Build.ArtifactStagingDirectory)/dist'
+    SourceFolder: 'C:\WebsiteAgent\_work\3\s\dist'
     Contents: '**/*'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 - task: PublishBuildArtifacts@1
