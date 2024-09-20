@@ -19,17 +19,18 @@ steps:
   displayName: 'Build project with Webpack'
 - task: CopyFiles@2
   inputs:
-    Contents: 'C:\WebsiteAgent\_work\2\s\dist\*'
-    TargetFolder: '$(build.artifactstagingdirectory)'
+    SourceFolder: '$(Build.ArtifactStagingDirectory)/dist'
+    Contents: '**/*'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'BuildFile'
+    ArtifactName: 'Dist'
     publishLocation: 'Container'
 - task: AzureWebApp@1
   inputs:
     azureSubscription: 'Pay-As-You-Go (5699603d-c14b-42b1-a393-6e7138a12d93)'
     appType: 'webApp'
     appName: 'Simplewebsite'
-    package: '$(Build.ArtifactStagingDirectory)/dist'
+    package: '$(Build.ArtifactStagingDirectory)'
     deploymentMethod: 'auto'
